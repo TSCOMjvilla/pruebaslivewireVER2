@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Livewire\ShowPost;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes

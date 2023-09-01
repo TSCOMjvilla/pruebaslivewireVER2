@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    @livewire('show-post',['title'=>'este es un titulo de prueba'])
                 </div>
             </div>
         </div>
