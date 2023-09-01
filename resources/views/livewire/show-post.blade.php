@@ -1,4 +1,4 @@
 <div>
-    <h1>hola mundo</h1>
+    <h1>hola mundos</h1>
     {{$titulo}}
 </div>
