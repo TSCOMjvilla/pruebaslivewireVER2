@@ -1,8 +1,21 @@
 <div>
 
-    <div class="px6 py-4">
-        <input type="text" wire:model='search' placeholder="buscar...">
-    </div>
+    <div class="container align-baseline">
+        <div class="row">
+          <div class="col">
+            <div>
+                <input class="flex" type="text" wire:model='search' placeholder="buscar...">
+            </div>
+          </div>
+          <div class="col">
+            
+          </div>
+          <div class="col-2">
+            @livewire('create-post')
+          </div>
+        </div>
+      </div>
+    
     @if ($posts->count())
         <table class="table table-striped">
             <thead>
@@ -19,7 +32,7 @@
                         <th scope="row">{{ $post->id }}</th>
                         <td>{{ $post->title }}</td>
                         <td>{{ $post->content }}</td>
-                        <td>edit</td>
+                        <td>@livewire('edit-post',['post'=>$post],key($post->id))</td>
                     </tr>
                 @endforeach
 
