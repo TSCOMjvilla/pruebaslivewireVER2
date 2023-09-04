@@ -3,17 +3,13 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Post;
 
 class ShowPost extends Component
 {
-    public $titulo;
-
-    public function mount($title){
-        $this->titulo=$title;
-    }
-
     public function render()
     {
-        return view('livewire.show-post');
+        $posts = Post::all();
+        return view('livewire.show-post', compact('posts'));
     }
 }
